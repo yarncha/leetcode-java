@@ -22,11 +22,7 @@ public class MaximumDepthofBinaryTree {
         if (tree.left != null && tree.right != null) {
             int lDepth = recuDepth(tree.left, res);
             int rDepth = recuDepth(tree.right, res);
-            if (lDepth > rDepth) {
-                res = lDepth;
-            } else {
-                res = rDepth;
-            }
+            res = Math.max(lDepth, rDepth);
         } else if (tree.left != null) {
             res = recuDepth(tree.left, res);
         } else if (tree.right != null) {
